@@ -77,5 +77,7 @@ UIやコードを更新する際は `sw.js` のキャッシュ名も更新し、
 - Nodeテスト145件が成功。100問の数独の一意解・難易度再現性に加え、地雷初手安全/一括開き、全52枚保持/FreeCell移動容量、2048合体/Undo、15パズル可解性などを検証。
 - 390pxのブラウザで各ゲームを表示。マインの開始と旗、ソリティアの基礎組移動/山札/Undo、フリーセルの待避マス移動、15パズルの移動/Undo、2048のスワイプ/方向ボタン/Undo/再読み込みを確認。
 - 数独の問題ファイルと保存キーを変更せず、従来の進捗を引き継ぐ構成にしています。
+- ローカルHTTPサーバーを停止して再読み込みし、一覧→数独→フリーセルへの移動と、各保存済み進捗の復元を確認。
+- GitHub Pages本番で6ゲームの入口を確認。390px/1280pxの一覧表示に横方向のはみ出しがなく、ブラウザのエラーログもなし。
 
 カードルールの参照元: [Bicycle: Klondike](https://bicyclecards.com/how-to-play/klondike)、[Brainium: FreeCell](https://brainium.helpshift.com/hc/en/8-freecell/faq/334-how-do-i-play-freecell/)。
