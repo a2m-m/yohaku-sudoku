@@ -1,0 +1,2002 @@
+[
+  {
+    "id": 1,
+    "level": 5,
+    "givens": "090108000004000006000060000000084050000070862009000300201540000700000004006003007",
+    "solution": "697138425324795186518462973162384759453971862879256341231547698785619234946823517",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 34,
+      "hiddenSingles": 23,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 2,
+    "level": 5,
+    "givens": "006700000000018025200000000800000046000000710300800000060002430070050000009004000",
+    "solution": "956723184734618925281549673815297346692435718347861259568972431473156892129384567",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 22,
+      "nakedSingles": 38,
+      "hiddenSingles": 21,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 3,
+    "level": 5,
+    "givens": "090006300000400006300800000000091400010065002760080100008000000000012040203000000",
+    "solution": "497126358581439276326857914832791465914365782765284139158943627679512843243678591",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 41,
+      "hiddenSingles": 16,
+      "lockedCandidates": 3,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 4,
+    "level": 5,
+    "givens": "006092074000000600000005003074000069002800007090000001000080006005000900063040200",
+    "solution": "386192574451738692927465183174253869632819457598674321249581736715326948863947215",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 44,
+      "hiddenSingles": 12,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 5,
+    "level": 5,
+    "givens": "890037010000000000000010798600400080002009000087000050100094020000005900300000100",
+    "solution": "896237514571948632234516798653471289412859376987623451165394827728165943349782165",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 34,
+      "hiddenSingles": 22,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 6,
+    "level": 5,
+    "givens": "409000002000009050200500000005040060800160000700000508080900407010006000030002006",
+    "solution": "459617382371829654268534971195748263823165749746293518682951437914376825537482196",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 50,
+      "hiddenSingles": 6,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 7,
+    "level": 5,
+    "givens": "205090000000200003070040000069000302700000090002680100090050400000000070006070081",
+    "solution": "215398764984267513673541829869715342751423698342689157197852436428136975536974281",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 42,
+      "hiddenSingles": 14,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 8,
+    "level": 5,
+    "givens": "400000250001460000000800000800200009060007000100600003300005082050000700000730040",
+    "solution": "496371258581462397732859416847213569963587124125694873379145682654928731218736945",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 44,
+      "hiddenSingles": 13,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 9,
+    "level": 5,
+    "givens": "050009800060010050004070000000200100000040060001060004900130000407000000020000070",
+    "solution": "753629841869314752214578396648295137372841569591763284986137425437952618125486973",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 22,
+      "nakedSingles": 39,
+      "hiddenSingles": 20,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 10,
+    "level": 5,
+    "givens": "000800000009540000081003000906000100003090000007310200100486090000050003790000800",
+    "solution": "562879341379541628481263975956728134213694587847315269135486792628957413794132856",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 26,
+      "nakedSingles": 36,
+      "hiddenSingles": 19,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 11,
+    "level": 5,
+    "givens": "004001005009005000002940010070000040580090000000200000000000097000809350000710402",
+    "solution": "864371925719625834352948716273586149586194273941237568138452697427869351695713482",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 35,
+      "hiddenSingles": 21,
+      "lockedCandidates": 3,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 12,
+    "level": 5,
+    "givens": "000001000825400100000070020400100002000830000000000009007002050004058091060010007",
+    "solution": "743281965825469173619375824486197532952834716371526489197642358234758691568913247",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 43,
+      "hiddenSingles": 13,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 13,
+    "level": 5,
+    "givens": "000002000902040100030980070020000090000600040005304000004050009008070000009000506",
+    "solution": "847162953952743168631985274426518397193627845785394612314856729568279431279431586",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 46,
+      "hiddenSingles": 11,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 14,
+    "level": 5,
+    "givens": "000001300000002084000560000000004002050000600000610007070008009910400003530000000",
+    "solution": "729841365165932784843567921691784532457293618382615497276358149918476253534129876",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 43,
+      "hiddenSingles": 15,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 15,
+    "level": 5,
+    "givens": "902000034000700010000010090000005600001023000007000080083501200020000009709000000",
+    "solution": "912658734536749812478312596394875621861923475257164983683591247125487369749236158",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 31,
+      "hiddenSingles": 26,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 16,
+    "level": 5,
+    "givens": "200539000003800605000000000000103050500200100000700002081040000090000068400007300",
+    "solution": "246539817973821645158476293829163754537294186614758932381642579792315468465987321",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 45,
+      "hiddenSingles": 11,
+      "lockedCandidates": 3,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 17,
+    "level": 5,
+    "givens": "007000000000652000060047800100830000092100000300000009680000090401000280000000560",
+    "solution": "957318426814652973263947815146839752592174638378265149685721394431596287729483561",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 45,
+      "hiddenSingles": 11,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 18,
+    "level": 5,
+    "givens": "009000410730000900000050003001400000000039006000200000208004009914300060000000020",
+    "solution": "689723415735641982142958673321465897857139246496287351268514739914372568573896124",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 40,
+      "hiddenSingles": 17,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 19,
+    "level": 5,
+    "givens": "095700000000002003040030000010000090003400800600000400070015034900200700001007500",
+    "solution": "395764128768152943142839675417528396523496817689371452876915234954283761231647589",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 40,
+      "hiddenSingles": 16,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 20,
+    "level": 5,
+    "givens": "002000040030000059000305002004087000000006085000500000603901070000008000409030006",
+    "solution": "852169347736824159941375862594287631317496285268513794623951478175648923489732516",
+    "rating": {
+      "level": 5,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 40,
+      "hiddenSingles": 16,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 21,
+    "level": 6,
+    "givens": "040000028000190500000080900010036084070000000020000050000005000806710000007000360",
+    "solution": "349657128782194536561382947915236784678549213423871659234965871856713492197428365",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 48,
+      "hiddenSingles": 9,
+      "lockedCandidates": 6,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 22,
+    "level": 6,
+    "givens": "870020005000000700000300090000070600016000000050094200062000003740001000108006007",
+    "solution": "873429165694815732521367498289173654416582379357694281962748513745931826138256947",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 43,
+      "hiddenSingles": 13,
+      "lockedCandidates": 6,
+      "nakedPairs": 2,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 23,
+    "level": 6,
+    "givens": "060000300000501090090240070000079001040000908001000000000002003610405020070000050",
+    "solution": "264987315783561492195243876826379541547126938931854267459712683618435729372698154",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 46,
+      "hiddenSingles": 10,
+      "lockedCandidates": 1,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 24,
+    "level": 6,
+    "givens": "100070000000600952030002600003000700081000000000067001049006000000000824000001060",
+    "solution": "162579438478613952935842617693128745781354296254967381549286173316795824827431569",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 45,
+      "hiddenSingles": 12,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 25,
+    "level": 6,
+    "givens": "000106000047000900080479000300050000000000000205000130004010020000000809030087006",
+    "solution": "529136784147528963683479251376851492418392675295764138864915327752643819931287546",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 51,
+      "hiddenSingles": 6,
+      "lockedCandidates": 6,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 26,
+    "level": 6,
+    "givens": "800000001405060000060050000090008410000030070750000200008004009010690002000000700",
+    "solution": "879342561425961387361857924296578413184239675753416298638724159517693842942185736",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 42,
+      "hiddenSingles": 15,
+      "lockedCandidates": 2,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 27,
+    "level": 6,
+    "givens": "001004000000290100600000207008000009000107052050008300300000000002800900014006000",
+    "solution": "821674593743295186695381247138452679469137852257968314386719425572843961914526738",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 42,
+      "hiddenSingles": 15,
+      "lockedCandidates": 2,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 28,
+    "level": 6,
+    "givens": "000000060001009200009006007020700000000192608090050000000240070008900000000000536",
+    "solution": "483527961761389254259416387826734195537192648194658723615243879378965412942871536",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 39,
+      "hiddenSingles": 18,
+      "lockedCandidates": 6,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 29,
+    "level": 6,
+    "givens": "030000095009200000700000804003050700260070000080000003000903040401000050000060000",
+    "solution": "832746195149285637756139824913458762264371589587692413675913248491827356328564971",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 43,
+      "hiddenSingles": 15,
+      "lockedCandidates": 5,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 30,
+    "level": 6,
+    "givens": "020006070004003090500090030006079081800600050400001600005000000007100005108000000",
+    "solution": "923416578784523196561798234356279481812634957479851623245367819697182345138945762",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 26,
+      "nakedSingles": 48,
+      "hiddenSingles": 7,
+      "lockedCandidates": 3,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 31,
+    "level": 6,
+    "givens": "960400000105000000040000807000630400006010300000508010019000000070200000004100006",
+    "solution": "967485231185327964243961857891632475456719328732548619319876542678254193524193786",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 37,
+      "hiddenSingles": 20,
+      "lockedCandidates": 5,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 32,
+    "level": 6,
+    "givens": "090036008002090075000700000017200040020000000800400600008007000200000000050001800",
+    "solution": "791536428682194375543782961917268543426315789835479612168957234279843156354621897",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 48,
+      "hiddenSingles": 10,
+      "lockedCandidates": 5,
+      "nakedPairs": 2,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 33,
+    "level": 6,
+    "givens": "000003000050800060000020007006000200280036000300400500064000000005090001000700084",
+    "solution": "678153492952847163413629857546971238281536749397482516764318925835294671129765384",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 42,
+      "hiddenSingles": 16,
+      "lockedCandidates": 2,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 34,
+    "level": 6,
+    "givens": "002500000600000053510040060900780000000010000001906400059000040060000000803050291",
+    "solution": "372568914694172853518349762935784126486215379721936485159823647267491538843657291",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 27,
+      "nakedSingles": 41,
+      "hiddenSingles": 13,
+      "lockedCandidates": 3,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 35,
+    "level": 6,
+    "givens": "000070000003005000400002009740000000030800000100709508000020305001400000070000602",
+    "solution": "816974253293685471457312869748253196935861724162749538689127345521436987374598612",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 41,
+      "hiddenSingles": 17,
+      "lockedCandidates": 7,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 36,
+    "level": 6,
+    "givens": "090700060080000070040003201350000000008504000000001056000209104009000030000600900",
+    "solution": "193742568682195473547863291351986742268574319974321856736259184829417635415638927",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 41,
+      "hiddenSingles": 15,
+      "lockedCandidates": 2,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 37,
+    "level": 6,
+    "givens": "000010080170009000800000603000002060040000028008050009000200000216093000000000130",
+    "solution": "462315987173689254859724613937842561541936728628157349385271496216493875794568132",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 33,
+      "hiddenSingles": 24,
+      "lockedCandidates": 5,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 38,
+    "level": 6,
+    "givens": "090000501020004090036100008000008900001905070040000000000701200680050000007403000",
+    "solution": "794826531128534697536197428372618945861945372945372186459781263683259714217463859",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 26,
+      "nakedSingles": 49,
+      "hiddenSingles": 6,
+      "lockedCandidates": 1,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "naked-pairs"
+    }
+  },
+  {
+    "id": 39,
+    "level": 6,
+    "givens": "100000230800009001700004000028005109000020703000000000000740000049050000000003806",
+    "solution": "195687234864239571732514698428375169916428753573961482381746925649852317257193846",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 43,
+      "hiddenSingles": 14,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 40,
+    "level": 6,
+    "givens": "050700006003600000009150000000020704800310600000000000000007069080000402410090007",
+    "solution": "158732946723649518649158273361925784872314695594876321235487169987561432416293857",
+    "rating": {
+      "level": 6,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 48,
+      "hiddenSingles": 8,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 0,
+      "searchBranches": 0,
+      "searchNodes": 0,
+      "searchDepth": 0,
+      "technique": "locked-candidates"
+    }
+  },
+  {
+    "id": 41,
+    "level": 7,
+    "givens": "030000010150904000006100000002640000000001320040000760607003040800090200000200000",
+    "solution": "934762815158934672276158493382647951769581324541329768627813549815496237493275186",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 17,
+      "hiddenSingles": 19,
+      "lockedCandidates": 0,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 20,
+      "searchBranches": 2,
+      "searchNodes": 46,
+      "searchDepth": 2,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 42,
+    "level": 7,
+    "givens": "000097500500080307800400001090001400005000630300700000000000800060002000900060020",
+    "solution": "631297584524186397879453261298631475715948632346725918152379846463812759987564123",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 7,
+      "hiddenSingles": 15,
+      "lockedCandidates": 4,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 35,
+      "searchBranches": 1,
+      "searchNodes": 36,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 43,
+    "level": 7,
+    "givens": "003025000100070000050003070600039000000040800980000020005000060009500300007000480",
+    "solution": "793125648126478539458963271672839154531742896984651723845317962269584317317296485",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 19,
+      "hiddenSingles": 25,
+      "lockedCandidates": 3,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 13,
+      "searchBranches": 1,
+      "searchNodes": 14,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 44,
+    "level": 7,
+    "givens": "000098600060204050002005008700000090030700000150000700000060005506307100000000040",
+    "solution": "475198632861234957392675418728416593634759281159823764243961875586347129917582346",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 4,
+      "hiddenSingles": 12,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 40,
+      "searchBranches": 3,
+      "searchNodes": 79,
+      "searchDepth": 3,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 45,
+    "level": 7,
+    "givens": "000009070040000806000320000708001900100700020000040000000402001360815000005000000",
+    "solution": "531689274249157836876324159728561943154793628693248715987432561362815497415976382",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 26,
+      "hiddenSingles": 9,
+      "lockedCandidates": 0,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 22,
+      "searchBranches": 1,
+      "searchNodes": 23,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 46,
+    "level": 7,
+    "givens": "460000009002000000953000020090000000508700400000100006270006010000900007006040500",
+    "solution": "461328759782591643953674821697432185518769432324185976279856314845913267136247598",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 1,
+      "hiddenSingles": 13,
+      "lockedCandidates": 3,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 43,
+      "searchBranches": 1,
+      "searchNodes": 44,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 47,
+    "level": 7,
+    "givens": "800950000530700000000200003000080000090002800000001406300000070040009002906000035",
+    "solution": "862953741534716298179248563651487329493562817287391456318625974745139682926874135",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 17,
+      "hiddenSingles": 5,
+      "lockedCandidates": 3,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 35,
+      "searchBranches": 2,
+      "searchNodes": 87,
+      "searchDepth": 2,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 48,
+    "level": 7,
+    "givens": "050020400000050007390000000806004090009200000570008020000010035600000000000003701",
+    "solution": "758321469462859317391746258826174593139265874574938126987412635613587942245693781",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 7,
+      "hiddenSingles": 13,
+      "lockedCandidates": 6,
+      "nakedPairs": 2,
+      "remainingAfterLogic": 37,
+      "searchBranches": 3,
+      "searchNodes": 61,
+      "searchDepth": 3,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 49,
+    "level": 7,
+    "givens": "009000608000500020000006000050000000000042009006000387000900010120060054000080070",
+    "solution": "519274638864593721732816495957638142381742569246159387473925816128367954695481273",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 14,
+      "hiddenSingles": 20,
+      "lockedCandidates": 0,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 24,
+      "searchBranches": 1,
+      "searchNodes": 25,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 50,
+    "level": 7,
+    "givens": "400002010080940000000000007000073008700000043008005006301600070804000000009207000",
+    "solution": "463752819587941632912368457246173598795826143138495726321684975874539261659217384",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 6,
+      "hiddenSingles": 23,
+      "lockedCandidates": 2,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 27,
+      "searchBranches": 2,
+      "searchNodes": 28,
+      "searchDepth": 2,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 51,
+    "level": 7,
+    "givens": "000600108004087005003000000900450670020009000001000800040003000205090006000020900",
+    "solution": "792635148164987235583241769938452671627819453451376892849163527215794386376528914",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 6,
+      "hiddenSingles": 6,
+      "lockedCandidates": 6,
+      "nakedPairs": 2,
+      "remainingAfterLogic": 44,
+      "searchBranches": 3,
+      "searchNodes": 76,
+      "searchDepth": 3,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 52,
+    "level": 7,
+    "givens": "006008200500700100000094070003000000070080041005006020000103005000000000090000060",
+    "solution": "736518294549762138128394576483271659672985341915436827267143985854629713391857462",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 22,
+      "nakedSingles": 2,
+      "hiddenSingles": 6,
+      "lockedCandidates": 8,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 51,
+      "searchBranches": 1,
+      "searchNodes": 52,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 53,
+    "level": 7,
+    "givens": "050063490900004800006000000590030000000407630000100000030000500000008047024000300",
+    "solution": "158763492972514863346892751597236184281457639463189275739641528615328947824975316",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 12,
+      "hiddenSingles": 13,
+      "lockedCandidates": 7,
+      "nakedPairs": 4,
+      "remainingAfterLogic": 31,
+      "searchBranches": 3,
+      "searchNodes": 32,
+      "searchDepth": 3,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 54,
+    "level": 7,
+    "givens": "080000500200630090365800002500003000000000000041067080000510004002004000000008130",
+    "solution": "789142563214635798365879412527983641638451927941267385893516274172394856456728139",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 26,
+      "nakedSingles": 4,
+      "hiddenSingles": 12,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 39,
+      "searchBranches": 3,
+      "searchNodes": 87,
+      "searchDepth": 3,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 55,
+    "level": 7,
+    "givens": "080000410500700009097030006000090040209005000870000000030400080000007000456020000",
+    "solution": "382569417564781329197234856613892745249175638875643291731456982928317564456928173",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 11,
+      "hiddenSingles": 18,
+      "lockedCandidates": 2,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 27,
+      "searchBranches": 3,
+      "searchNodes": 76,
+      "searchDepth": 3,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 56,
+    "level": 7,
+    "givens": "405000000800007105100008260300005000000000094001700000000400701000002008903000050",
+    "solution": "465123879832967145197548263349285617278316594651794382586439721714652938923871456",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 18,
+      "hiddenSingles": 10,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 29,
+      "searchBranches": 3,
+      "searchNodes": 87,
+      "searchDepth": 2,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 57,
+    "level": 7,
+    "givens": "048020000000000063006079000000000030000814900000095106009700000010000284020050390",
+    "solution": "148623759972581463356479821491267538563814972287395146839742615715936284624158397",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 27,
+      "nakedSingles": 14,
+      "hiddenSingles": 9,
+      "lockedCandidates": 4,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 31,
+      "searchBranches": 3,
+      "searchNodes": 61,
+      "searchDepth": 2,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 58,
+    "level": 7,
+    "givens": "003040000040109000200000009000003007002008006450020900021730000700500001006000030",
+    "solution": "693842175845179362217365489169453827372918546458627913921734658734586291586291734",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 3,
+      "hiddenSingles": 8,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 45,
+      "searchBranches": 1,
+      "searchNodes": 61,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 59,
+    "level": 7,
+    "givens": "005010002002064070000000060010009000004020007809000100000000086000730090020580000",
+    "solution": "695317842132864579748295361213479658564128937879653124351942786486731295927586413",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 5,
+      "hiddenSingles": 19,
+      "lockedCandidates": 3,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 33,
+      "searchBranches": 1,
+      "searchNodes": 34,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 60,
+    "level": 7,
+    "givens": "000000006070000300200500700031000060900005240800010000500060030080170600000800000",
+    "solution": "193728456675941382248536719431297568967385241852614973519462837384179625726853194",
+    "rating": {
+      "level": 7,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 18,
+      "hiddenSingles": 23,
+      "lockedCandidates": 0,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 17,
+      "searchBranches": 1,
+      "searchNodes": 31,
+      "searchDepth": 1,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 61,
+    "level": 8,
+    "givens": "040503000059000030700620000004305100030800026000010000900100002000000708080007000",
+    "solution": "846593217259781634713624895624375189137849526598216473975168342461932758382457961",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 2,
+      "hiddenSingles": 3,
+      "lockedCandidates": 2,
+      "nakedPairs": 3,
+      "remainingAfterLogic": 51,
+      "searchBranches": 7,
+      "searchNodes": 190,
+      "searchDepth": 4,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 62,
+    "level": 8,
+    "givens": "490800300060070001003060009900000010000000600000702098004009000000006073005400000",
+    "solution": "491825367568973241723164859952638714847591632316742598674389125189256473235417986",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 1,
+      "hiddenSingles": 15,
+      "lockedCandidates": 3,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 41,
+      "searchBranches": 9,
+      "searchNodes": 131,
+      "searchDepth": 5,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 63,
+    "level": 8,
+    "givens": "000000050420000070001507300007000000850000000000000920000003001180460005600009200",
+    "solution": "738246159425931876961587342217698534859324617346715928592873461183462795674159283",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 16,
+      "hiddenSingles": 14,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 28,
+      "searchBranches": 6,
+      "searchNodes": 126,
+      "searchDepth": 5,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 64,
+    "level": 8,
+    "givens": "730000400000000000950003080002050700000791002800000006000000600007102000503008009",
+    "solution": "731289465284567931956413287412856793365791842879324516128935674697142358543678129",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 8,
+      "hiddenSingles": 14,
+      "lockedCandidates": 7,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 35,
+      "searchBranches": 4,
+      "searchNodes": 86,
+      "searchDepth": 4,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 65,
+    "level": 8,
+    "givens": "000060005280003000065010000091000000000806003600007000002500007057009800000000004",
+    "solution": "173264985289753146465918372791435268524896713638127459942581637357649821816372594",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 5,
+      "hiddenSingles": 9,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 44,
+      "searchBranches": 9,
+      "searchNodes": 215,
+      "searchDepth": 5,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 66,
+    "level": 8,
+    "givens": "043050000600200001100700000000000100000090050870502034009000060030049700000820000",
+    "solution": "243951678687234591195786423952473186364198257871562934429317865538649712716825349",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 0,
+      "hiddenSingles": 5,
+      "lockedCandidates": 5,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 51,
+      "searchBranches": 8,
+      "searchNodes": 95,
+      "searchDepth": 8,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 67,
+    "level": 8,
+    "givens": "080040050405000000000009308200400019600000000000180600056203000002060890007000000",
+    "solution": "389641752425378961761529348278436519613952487594187623856293174132764895947815236",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 3,
+      "hiddenSingles": 13,
+      "lockedCandidates": 4,
+      "nakedPairs": 2,
+      "remainingAfterLogic": 40,
+      "searchBranches": 4,
+      "searchNodes": 49,
+      "searchDepth": 4,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 68,
+    "level": 8,
+    "givens": "000000940008300001000106000090250030006000005050070000060000000809020070124000500",
+    "solution": "613582947548397261972146853497251638286934715351678492765819324839425176124763589",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 2,
+      "hiddenSingles": 7,
+      "lockedCandidates": 7,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 48,
+      "searchBranches": 4,
+      "searchNodes": 49,
+      "searchDepth": 4,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 69,
+    "level": 8,
+    "givens": "000380001000006200080090600063000008405008060000900010000000000020439805000050009",
+    "solution": "756382941914576283382194657163245798495718362278963514549827136621439875837651429",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 7,
+      "hiddenSingles": 14,
+      "lockedCandidates": 3,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 35,
+      "searchBranches": 5,
+      "searchNodes": 99,
+      "searchDepth": 3,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 70,
+    "level": 8,
+    "givens": "100070000020003080000010009900020000058000020000300500009041000007008060000506013",
+    "solution": "193872645624953187875614239936125478758469321241387596369741852517238964482596713",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 13,
+      "hiddenSingles": 13,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 31,
+      "searchBranches": 4,
+      "searchNodes": 54,
+      "searchDepth": 3,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 71,
+    "level": 8,
+    "givens": "000000001000740002000009400900001050080060030002000700400002360800090000301086000",
+    "solution": "794623581513748692268519473947231856185967234632854719459172368826395147371486925",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 7,
+      "hiddenSingles": 6,
+      "lockedCandidates": 9,
+      "nakedPairs": 3,
+      "remainingAfterLogic": 44,
+      "searchBranches": 6,
+      "searchNodes": 95,
+      "searchDepth": 6,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 72,
+    "level": 8,
+    "givens": "000005109001020700296000030020079000003040070000500061000300000700050400309008000",
+    "solution": "437685129581923746296714835625179384913846572874532961142397658768251493359468217",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 26,
+      "nakedSingles": 0,
+      "hiddenSingles": 7,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 48,
+      "searchBranches": 5,
+      "searchNodes": 49,
+      "searchDepth": 5,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 73,
+    "level": 8,
+    "givens": "003200080008000007020006010080061500000000000140070020000403006802000100300600000",
+    "solution": "413297685658134297729586413287361549935842761146975328591423876862759134374618952",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 0,
+      "hiddenSingles": 20,
+      "lockedCandidates": 8,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 37,
+      "searchBranches": 10,
+      "searchNodes": 212,
+      "searchDepth": 5,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 74,
+    "level": 8,
+    "givens": "095020000023900761700000000530090000610040080004000007000204930000070000000000204",
+    "solution": "195726843423958761768413592537891426612547389984632157871264935249375618356189274",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 26,
+      "nakedSingles": 12,
+      "hiddenSingles": 6,
+      "lockedCandidates": 4,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 37,
+      "searchBranches": 9,
+      "searchNodes": 166,
+      "searchDepth": 4,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 75,
+    "level": 8,
+    "givens": "000000200630000900007004650000406700000100000080907040070000130026300400900000008",
+    "solution": "459763281638512974217894653392486715764135829581927346875649132126358497943271568",
+    "rating": {
+      "level": 8,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 3,
+      "hiddenSingles": 10,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 43,
+      "searchBranches": 5,
+      "searchNodes": 46,
+      "searchDepth": 5,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 76,
+    "level": 9,
+    "givens": "000008002000000060700002490000000000000190035008000049900006000002050004360007020",
+    "solution": "634978152829541367751632498493825716276194835518763249947216583182359674365487921",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 5,
+      "hiddenSingles": 7,
+      "lockedCandidates": 10,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 46,
+      "searchBranches": 17,
+      "searchNodes": 362,
+      "searchDepth": 7,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 77,
+    "level": 9,
+    "givens": "080031250000009800000800041000000005910000000000050913096008000800040690002003000",
+    "solution": "687431259143529867529876341364192785915387426278654913796218534831745692452963178",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 26,
+      "nakedSingles": 2,
+      "hiddenSingles": 6,
+      "lockedCandidates": 7,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 47,
+      "searchBranches": 29,
+      "searchNodes": 387,
+      "searchDepth": 8,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 78,
+    "level": 9,
+    "givens": "000500001002000906006020370008069000090005204040000790009008010050000400200000000",
+    "solution": "374596821512387946986124375728469153193875264645231798439758612857612439261943587",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 12,
+      "hiddenSingles": 5,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 39,
+      "searchBranches": 16,
+      "searchNodes": 212,
+      "searchDepth": 7,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 79,
+    "level": 9,
+    "givens": "007001000010009285500000013200700030090008000000000009000100094000205000003080000",
+    "solution": "327851946614379285589624713245796831196538427738412659872163594961245378453987162",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 4,
+      "hiddenSingles": 6,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 48,
+      "searchBranches": 38,
+      "searchNodes": 392,
+      "searchDepth": 10,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 80,
+    "level": 9,
+    "givens": "000000000710060540003000008000040300059300010080001000000080200040700800002904050",
+    "solution": "425897631718263549693415728176549382259378416384621975537186294941752863862934157",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 3,
+      "hiddenSingles": 9,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 45,
+      "searchBranches": 31,
+      "searchNodes": 419,
+      "searchDepth": 9,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 81,
+    "level": 9,
+    "givens": "020000048090000000004026000360200170000800500900300002400008607100050020000700000",
+    "solution": "526179348791483265834526791368245179247891536915367482452938617179654823683712954",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 0,
+      "hiddenSingles": 9,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 47,
+      "searchBranches": 19,
+      "searchNodes": 217,
+      "searchDepth": 9,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 82,
+    "level": 9,
+    "givens": "400000000009540001700000080000000610907480030015003007004200070000030008000010500",
+    "solution": "426178953839542761751396482348725619967481235215963847184259376572634198693817524",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 10,
+      "hiddenSingles": 5,
+      "lockedCandidates": 3,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 41,
+      "searchBranches": 15,
+      "searchNodes": 228,
+      "searchDepth": 6,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 83,
+    "level": 9,
+    "givens": "001000000000000090600950020000300000072008000000000076050003080100004200903001750",
+    "solution": "291486537745132698638957421564379812372618945819245376456723189187594263923861754",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 2,
+      "hiddenSingles": 6,
+      "lockedCandidates": 9,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 50,
+      "searchBranches": 15,
+      "searchNodes": 379,
+      "searchDepth": 6,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 84,
+    "level": 9,
+    "givens": "000080009000510270350000040710000090000000030000800006043628000000300000100704000",
+    "solution": "271486359469513278358972641716235894824169735935847126543628917697351482182794563",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 1,
+      "hiddenSingles": 6,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 50,
+      "searchBranches": 26,
+      "searchNodes": 247,
+      "searchDepth": 8,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 85,
+    "level": 9,
+    "givens": "000020080000460001293000000050000400002010000060000390001500067500200000009008050",
+    "solution": "416925783785463921293781645857392416932614578164857392321549867548276139679138254",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 4,
+      "hiddenSingles": 9,
+      "lockedCandidates": 3,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 44,
+      "searchBranches": 19,
+      "searchNodes": 252,
+      "searchDepth": 11,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 86,
+    "level": 9,
+    "givens": "700040005400900000000508030130004009002000008000006300020009006801002000060370000",
+    "solution": "786243195453917862219568437138724659692135748574896321327489516841652973965371284",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 0,
+      "hiddenSingles": 5,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 51,
+      "searchBranches": 17,
+      "searchNodes": 237,
+      "searchDepth": 9,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 87,
+    "level": 9,
+    "givens": "000040235040000908207000000070023090800000600001000000000790300000005060690010002",
+    "solution": "968147235145362978237958416476523891859471623321689547512796384784235169693814752",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 0,
+      "hiddenSingles": 10,
+      "lockedCandidates": 4,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 46,
+      "searchBranches": 31,
+      "searchNodes": 427,
+      "searchDepth": 9,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 88,
+    "level": 9,
+    "givens": "008027003000005600120030080000501200000000000090004007800010020200300060005000100",
+    "solution": "658927413934185672127436589783591246462873951591264837846719325219358764375642198",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 0,
+      "hiddenSingles": 12,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 45,
+      "searchBranches": 13,
+      "searchNodes": 123,
+      "searchDepth": 8,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 89,
+    "level": 9,
+    "givens": "040000200001004000800300900000008030200130090060000070320700000500080004007000006",
+    "solution": "649875213731294568852361947975628431284137695163459872328746159516983724497512386",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 1,
+      "hiddenSingles": 9,
+      "lockedCandidates": 5,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 48,
+      "searchBranches": 22,
+      "searchNodes": 417,
+      "searchDepth": 8,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 90,
+    "level": 9,
+    "givens": "004000000860402000050930000748000000009000600000304900000207003000005200010000809",
+    "solution": "394856721861472395257931468748569132139728654625314987486297513973185246512643879",
+    "rating": {
+      "level": 9,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 5,
+      "hiddenSingles": 4,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 48,
+      "searchBranches": 17,
+      "searchNodes": 336,
+      "searchDepth": 6,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 91,
+    "level": 10,
+    "givens": "000000065030960000700003000040007002602010000001400900925004000007090054000000800",
+    "solution": "298741365534968721716523498349657182672819543851432976925184637187396254463275819",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 0,
+      "hiddenSingles": 8,
+      "lockedCandidates": 3,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 48,
+      "searchBranches": 68,
+      "searchNodes": 987,
+      "searchDepth": 10,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 92,
+    "level": 10,
+    "givens": "010400000260800005059000200120000050005060090000004700000006000000130906000020031",
+    "solution": "718452369263891475459673218127389654845267193936514782381946527572138946694725831",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 25,
+      "nakedSingles": 0,
+      "hiddenSingles": 10,
+      "lockedCandidates": 4,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 46,
+      "searchBranches": 43,
+      "searchNodes": 676,
+      "searchDepth": 8,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 93,
+    "level": 10,
+    "givens": "000000014005801000008030000802000400900700025000600000000300150300092070006000000",
+    "solution": "237569814695841237148237596872953461964718325513624789489376152351492678726185943",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 3,
+      "hiddenSingles": 8,
+      "lockedCandidates": 0,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 47,
+      "searchBranches": 61,
+      "searchNodes": 824,
+      "searchDepth": 10,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 94,
+    "level": 10,
+    "givens": "000000300460050020000070000300149050040020000002000700608000040003008000000510007",
+    "solution": "281964375467853921539271486376149258845627193192385764618732549753498612924516837",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 1,
+      "hiddenSingles": 10,
+      "lockedCandidates": 7,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 47,
+      "searchBranches": 58,
+      "searchNodes": 924,
+      "searchDepth": 9,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 95,
+    "level": 10,
+    "givens": "000070460000000802000006510000001090108030040030805000500200070307000000010090000",
+    "solution": "853172469671954832942386517465721398128639745739845126586213974397468251214597683",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 4,
+      "hiddenSingles": 3,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 50,
+      "searchBranches": 52,
+      "searchNodes": 734,
+      "searchDepth": 11,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 96,
+    "level": 10,
+    "givens": "000950700600000009020030000000500010008060050000003800002000067580000004090700000",
+    "solution": "134956728675824139829137645963578412748261953251493876412389567587612394396745281",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 22,
+      "nakedSingles": 0,
+      "hiddenSingles": 4,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 55,
+      "searchBranches": 73,
+      "searchNodes": 786,
+      "searchDepth": 14,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 97,
+    "level": 10,
+    "givens": "400030005000000490080005002091004050500082009008000000060000000005008917079000003",
+    "solution": "416239875253817496987465132691374258534182769728956341162793584345628917879541623",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 26,
+      "nakedSingles": 1,
+      "hiddenSingles": 5,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 49,
+      "searchBranches": 56,
+      "searchNodes": 839,
+      "searchDepth": 11,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 98,
+    "level": 10,
+    "givens": "000100000403000009027850000960078000000002000000900074000090607006200008010000050",
+    "solution": "698143725453726189127859463965478231874312596231965874382591647546237918719684352",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 24,
+      "nakedSingles": 1,
+      "hiddenSingles": 6,
+      "lockedCandidates": 5,
+      "nakedPairs": 1,
+      "remainingAfterLogic": 50,
+      "searchBranches": 51,
+      "searchNodes": 886,
+      "searchDepth": 10,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 99,
+    "level": 10,
+    "givens": "040000002008030050020000400700910004005020003000008010000090607300705000900000000",
+    "solution": "547189362698234751123657498762913584815426973439578216254891637386745129971362845",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 0,
+      "hiddenSingles": 3,
+      "lockedCandidates": 1,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 55,
+      "searchBranches": 158,
+      "searchNodes": 2376,
+      "searchDepth": 12,
+      "technique": "search"
+    }
+  },
+  {
+    "id": 100,
+    "level": 10,
+    "givens": "000350200000000400026000000008000000043500100070010000050800070030200804900103000",
+    "solution": "817354269395627418426981753168732945243596187579418632652849371731265894984173526",
+    "rating": {
+      "level": 10,
+      "valid": true,
+      "givens": 23,
+      "nakedSingles": 4,
+      "hiddenSingles": 6,
+      "lockedCandidates": 2,
+      "nakedPairs": 0,
+      "remainingAfterLogic": 48,
+      "searchBranches": 55,
+      "searchNodes": 956,
+      "searchDepth": 11,
+      "technique": "search"
+    }
+  }
+]

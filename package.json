@@ -1,0 +1,12 @@
+{
+  "name": "yohaku-sudoku",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "広告なし、100問の数独。スマホで遊べる静的Webアプリ。",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "generate": "node scripts/generate-puzzles.mjs"
+  }
+}
