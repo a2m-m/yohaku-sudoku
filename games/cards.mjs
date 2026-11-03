@@ -3,12 +3,13 @@ import { SUITS, rank, suit, isRed, label, createState, restoreState, serializeSt
 const faces = ['','A','2','3','4','5','6','7','8','9','10','J','Q','K'];
 const formatTime = elapsed => `${String(Math.floor(elapsed / 60)).padStart(2,'0')}:${String(elapsed % 60).padStart(2,'0')}`;
 const sameSource = (a,b) => a && b && a.type === b.type && a.index === b.index && a.offset === b.offset;
+const volatileStore = new Map();
 
 export function mount(container, { id = 'solitaire', notify = () => {}, onUpdate = () => {} } = {}) {
   const variant = id === 'freecell' ? 'freecell' : 'solitaire';
   const storageKey = `yohaku-games:v1:${variant}`;
   let state, selected = null, hintTarget = null, disposed = false, lastTick = performance.now(), fraction = 0, storageOK = true;
-  try { state = restoreState(JSON.parse(localStorage.getItem(storageKey)), variant); } catch {}
+  try { state = restoreState(volatileStore.has(storageKey) ? volatileStore.get(storageKey) : JSON.parse(localStorage.getItem(storageKey)), variant); } catch {}
   state ||= createState(variant);
   container.classList.add('cds-mount');
   container.innerHTML = `<div class="cds-game ${variant === 'freecell' ? 'cds-freecell' : 'cds-solitaire'}">
@@ -22,7 +23,9 @@ export function mount(container, { id = 'solitaire', notify = () => {}, onUpdate
   const find = selector => container.querySelector(selector);
 
   function save() {
-    try { localStorage.setItem(storageKey, JSON.stringify(serializeState(state))); }
+    const saved = serializeState(state);
+    volatileStore.set(storageKey, saved);
+    try { localStorage.setItem(storageKey, JSON.stringify(saved)); }
     catch { if (storageOK) notify('保存できませんでした。画面を閉じると進捗が失われる場合があります。'); storageOK = false; }
     find('[data-save]').textContent = storageOK ? 'この端末に自動保存' : 'この画面内でプレイ中';
   }

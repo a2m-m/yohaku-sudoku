@@ -1,6 +1,7 @@
 import { PRESETS, createMines, reveal, toggleFlag, restartMines, restoreMines } from './mines-engine.mjs';
 
 const KEY = 'yohaku-games:v1:mines';
+const volatileStore = new Map();
 const svg = (path, extra = '') => `<svg viewBox="0 0 24 24" aria-hidden="true" ${extra}>${path}</svg>`;
 const FLAG = svg('<path d="M6 21V3m0 1c5-4 7 4 13 0v10c-6 4-8-4-13 0"/>');
 const MINE = svg('<circle cx="12" cy="12" r="5"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3M16 8l3-3"/>');
@@ -8,7 +9,7 @@ const timeLabel = sec => `${String(Math.floor(sec / 60)).padStart(2, '0')}:${Str
 
 export function mount(container, { notify = () => {}, onUpdate = () => {} } = {}) {
   let state;
-  try { state = restoreMines(JSON.parse(localStorage.getItem(KEY))); } catch { /* Private mode or invalid JSON: start fresh. */ }
+  try { state = restoreMines(JSON.parse(volatileStore.has(KEY) ? volatileStore.get(KEY) : localStorage.getItem(KEY))); } catch { /* Private mode or invalid JSON: start fresh. */ }
   state ||= createMines();
   let flagMode = false, paused = false, storageWarned = false, lastTick = performance.now(), fraction = 0, lastSaved = -1, focusIndex = 0;
   let destroyed = false;
@@ -19,13 +20,15 @@ export function mount(container, { notify = () => {}, onUpdate = () => {} } = {}
   select.value = state.difficulty;
 
   function save() {
-    try { localStorage.setItem(KEY, JSON.stringify(state)); }
+    const serialized = JSON.stringify(state);
+    volatileStore.set(KEY, serialized);
+    try { localStorage.setItem(KEY, serialized); }
     catch { if (!storageWarned) { notify('このブラウザでは保存できません。画面を閉じると進捗が失われる場合があります。'); storageWarned = true; } }
     onUpdate({ game: 'mines', started: state.firstIndex !== null, completed: state.status === 'won' });
   }
   function updateStats() {
     $('.mns-clock').textContent = timeLabel(state.elapsed);
-    $('.mns-remaining').textContent = String(state.mineCount - state.flags.filter(Boolean).length).padStart(2, '0');
+    $('.mns-remaining').textContent = String(state.status === 'won' ? 0 : state.mineCount - state.flags.filter(Boolean).length).padStart(2, '0');
     $('.mns-opened').textContent = `${state.open.filter((v, i) => v && !state.mines[i]).length} / ${state.rows * state.cols - state.mineCount}`;
   }
   function render() {
