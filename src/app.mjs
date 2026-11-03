@@ -254,6 +254,7 @@ async function start() {
     puzzles=await response.json();
     if(!Array.isArray(puzzles)||puzzles.length!==100)throw new Error('Invalid puzzle collection');
     loadPuzzle(Number(read('current',1)));
+    try { localStorage.setItem('yohaku-games:last',JSON.stringify({id:'sudoku',playedAt:Date.now()})); } catch {}
     setInterval(tick,250);
     if('serviceWorker' in navigator)navigator.serviceWorker.register(new URL('../sw.js',import.meta.url)).catch(()=>{});
   }catch(error){

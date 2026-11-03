@@ -12,4 +12,4 @@ http.createServer(async (req,res) => {
     const data = await readFile(file);
     res.writeHead(200, {'Content-Type':types[extname(file)] || 'application/octet-stream','Cache-Control':'no-cache'}).end(data);
   } catch { res.writeHead(404).end('Not found'); }
-}).listen(port,'0.0.0.0',() => console.log(`余白の数独: http://localhost:${port}`));
+}).listen(port,'0.0.0.0',() => console.log(`余白のゲーム室: http://localhost:${port}`));

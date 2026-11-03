@@ -1,7 +1,7 @@
-const CACHE='yohaku-sudoku-v1';
-const ASSETS=['./','./index.html','./style.css','./src/app.mjs','./src/game.mjs','./src/sudoku.mjs','./puzzles.json','./manifest.webmanifest','./icon.svg'];
+const CACHE='yohaku-games-v2.0.0';
+const ASSETS=['./','./index.html','./sudoku.html','./room.css','./style.css','./src/room.mjs','./src/app.mjs','./src/game.mjs','./src/sudoku.mjs','./games/mines.mjs','./games/mines-engine.mjs','./games/mines.css','./games/cards.mjs','./games/cards-engine.mjs','./games/cards.css','./games/numbers.mjs','./games/numbers-engine.mjs','./games/numbers.css','./puzzles.json','./manifest.webmanifest','./icon.svg'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
-self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('yohaku-sudoku-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>(key.startsWith('yohaku-sudoku-')||key.startsWith('yohaku-games-'))&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{
   if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;
   event.respondWith(fetch(event.request).then(response=>{

@@ -4,58 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f8f4">
-  <meta name="description" content="広告なし、会員登録なし。難易度5〜10の100問を、あなたのペースで。スマホで遊べる余白の数独。">
+  <meta name="description" content="数独、マインスイーパー、ソリティア、フリーセル、15パズル、2048。広告も登録もない、スマホで遊べる定番ゲーム集。">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>余白の数独 — 100 puzzles, your pace.</title>
+  <title>余白のゲーム室 — いつものゲーム、あなたのペースで。</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./room.css">
+  <link rel="stylesheet" href="./games/mines.css">
+  <link rel="stylesheet" href="./games/cards.css">
+  <link rel="stylesheet" href="./games/numbers.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="./" aria-label="余白の数独 ホーム">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <span>余白<span class="brand-sub">の数独</span></span>
-    </a>
-    <div class="header-right"><span class="no-ads"><i></i> 広告のない、考える時間。</span><button class="icon-button" id="help-button" aria-label="遊び方と設定"></button></div>
+  <header class="room-header">
+    <a class="room-brand" href="./" aria-label="余白のゲーム室 ホーム"><span class="room-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>余白<span class="room-brand-sub">のゲーム室</span></span></a>
+    <div class="room-header-right"><span class="room-quiet"><i></i> 広告なし。いつでも、気軽に。</span><button class="room-icon-button" id="about-button" aria-label="このゲーム室について">?</button></div>
   </header>
 
-  <main class="app-layout">
-    <aside class="collection" aria-label="問題集">
-      <div class="eyebrow">THE SUDOKU COLLECTION</div>
-      <h1>ひとマスずつ、<br>自分のペースで。</h1>
-      <p class="collection-description">少し歯ごたえのある100問。<br>考える時間に、余計なものはいらない。</p>
-      <div class="collection-progress"><div><span>コレクションの進捗</span><strong id="collection-count">0 <small>/ 100</small></strong></div><div class="progress-track"><div id="collection-progress-fill"></div></div></div>
-      <div class="section-heading"><h2>難易度を選ぶ</h2><span>10段階評価</span></div>
-      <div class="level-list" id="level-list"></div>
-      <button class="browse-button" id="browse-button"><span>100問の問題集を見る</span><span aria-hidden="true">↗</span></button>
-      <div class="aside-footer"><span class="tiny-grid" aria-hidden="true">▦</span><p>いつでも中断して、大丈夫。<br>続きはこの端末に自動保存されます。</p></div>
-    </aside>
+  <main id="room-main">
+    <section id="home-view" class="room-home" aria-labelledby="home-title">
+      <div class="room-intro"><div><span class="room-eyebrow">A LITTLE ROOM FOR THE CLASSICS</span><h1 id="home-title">今日は、どれで遊ぶ？</h1><p>懐かしい定番を、あなたのペースで。<br class="mobile-break">ルールは知らなくても、大丈夫。</p></div><span class="room-collection-label"><span>06</span> GAMES<br>NO DISTRACTIONS.</span></div>
+      <a id="recent-game" class="room-recent" hidden><span class="room-recent-icon" aria-hidden="true">↶</span><span><small>また、ここから。</small><strong id="recent-title"></strong></span><span class="room-recent-arrow" aria-hidden="true">→</span></a>
+      <div class="room-library-heading"><div class="room-filters" id="game-filters" aria-label="ゲームの種類"><button class="active" data-filter="all" aria-pressed="true">すべて <span>6</span></button><button data-filter="puzzle" aria-pressed="false">パズル</button><button data-filter="cards" aria-pressed="false">カード</button></div><span id="game-count">6つの定番ゲーム</span></div>
+      <div class="room-game-grid" id="game-grid"></div>
+      <div class="room-home-note"><span class="room-note-symbol" aria-hidden="true">◇</span><p>ひと休みしても、続きはここに。<br><span>途中経過はこのブラウザに自動保存。初回読み込み後はオフラインでも遊べます。</span></p></div>
+    </section>
 
-    <section class="play-area" aria-label="数独をプレイ">
-      <div class="play-heading"><div><span class="eyebrow">A LITTLE SPACE FOR YOUR MIND</span><h2>今日の、ひとマス。</h2></div><button class="mobile-library" id="mobile-library">問題集 <span aria-hidden="true">▦</span></button></div>
-      <div class="game-meta"><button class="puzzle-label" id="puzzle-label" aria-label="問題を選ぶ"><span id="current-level" class="level-badge">LEVEL 5</span><span id="puzzle-number">No. 001</span><span class="small-chevron" aria-hidden="true">⌄</span></button><button class="timer-button" id="pause-button" aria-label="一時停止"><span id="timer">00:00</span><span id="pause-icon"></span></button></div>
-      <div class="board-wrap" id="board-wrap"><div id="board" class="board" role="grid" aria-label="9行9列の数独盤面"></div><div class="pause-overlay" id="pause-overlay" hidden><span class="pause-symbol">Ⅱ</span><h3>ひと息、つきましょう。</h3><button class="primary-button" id="resume-button">続きをプレイ</button></div></div>
-      <div class="board-caption"><span id="game-status" role="status" aria-live="polite">マスを選んで、数字を入力</span><span id="filled-count">0 / 81</span></div>
-      <div class="game-tools" aria-label="入力ツール">
-        <button class="tool-button" id="undo-button"><span class="tool-icon"></span><span>戻す</span></button>
-        <button class="tool-button" id="erase-button"><span class="tool-icon"></span><span>消す</span></button>
-        <button class="tool-button" id="notes-button" aria-pressed="false"><span class="tool-icon"></span><span>メモ<span class="mode-label" id="note-mode-label">OFF</span></span></button>
-        <button class="tool-button" id="candidates-button"><span class="tool-icon"></span><span>候補を記入</span></button>
-        <button class="tool-button" id="hint-button"><span class="tool-icon"></span><span>ヒント</span></button>
-      </div>
-      <div class="number-pad" id="number-pad" aria-label="数字を入力"></div>
-      <div class="play-footer"><span class="saved-status" id="saved-status"><i></i> 自動保存済み</span><button id="new-game-button">別の問題へ <span aria-hidden="true">→</span></button></div>
+    <section id="game-view" class="room-play" hidden aria-labelledby="game-title">
+      <div class="room-play-top"><a href="#" class="room-back">← <span>ゲーム一覧</span></a><button id="rules-button" class="room-rules-button"><span aria-hidden="true">?</span> 遊び方</button></div>
+      <div class="room-game-heading"><div><span class="room-eyebrow" id="game-category"></span><h1 id="game-title" tabindex="-1"></h1></div><span class="room-game-number" id="game-number"></span></div>
+      <p id="game-one-line" class="room-game-one-line"></p>
+      <div id="game-container" class="room-game-container"></div>
+      <p class="room-game-save"><span id="room-save-status"><i></i> このブラウザに自動保存</span><span>広告・回数制限なし</span></p>
     </section>
   </main>
-  <footer class="site-footer"><span>Y O H A K U &nbsp; / &nbsp; S U D O K U</span><span>100 puzzles. No distractions.</span></footer>
 
-  <dialog id="library-dialog" class="library-dialog"><div class="dialog-heading"><div><span class="eyebrow">YOUR COLLECTION</span><h2>100問の問題集</h2></div><button class="icon-button close-dialog" aria-label="閉じる"></button></div><p class="dialog-intro">好きな問題から、少しずつ。途中の問題も続きから遊べます。</p><div class="library-filters" id="library-filters" aria-label="難易度で絞り込む"></div><div class="library-legend"><span><i class="legend-current"></i> プレイ中</span><span><i class="legend-started"></i> 途中</span><span><i class="legend-complete"></i> クリア</span></div><div class="puzzle-grid" id="puzzle-grid"></div><p class="difficulty-note">レベルは候補の絞り込み・必要な探索量をもとにした、このアプリ内の10段階評価です。</p></dialog>
-  <dialog id="help-dialog"><div class="dialog-heading"><div><span class="eyebrow">MAKE YOURSELF AT HOME</span><h2>遊び方と設定</h2></div><button class="icon-button close-dialog" aria-label="閉じる"></button></div><div class="help-copy"><h3>ルールは、ひとつ。</h3><p>タテ・ヨコ・3×3のブロックに、1〜9をひとつずつ。初めからある数字は動かせません。</p><h3>あなたのペースで。</h3><p>マスをタップして数字を選びます。「メモ」で候補を書き込み、「候補を記入」で空きマスの候補をまとめて表示できます。ヒントは回数制限なく使えます。</p><label class="setting-row" for="auto-check"><span><strong>間違いを自動で表示</strong><small>答えと異なる数字を赤く表示します</small></span><input type="checkbox" id="auto-check" role="switch"></label><p class="help-shortcuts">パソコンでは数字キーで入力。矢印キーで移動、Nでメモ、Deleteで消去、⌘ / Ctrl + Zで元に戻せます。</p><p class="help-storage">進捗はこのブラウザに保存されます。別の端末とは同期しません。ブラウザのデータを消すと進捗も消えます。初回読み込み後はオフラインでも遊べます。</p></div><button class="secondary-button" id="restart-button">この問題を最初から</button></dialog>
-  <dialog id="completion-dialog" class="completion-dialog"><div class="completion-art" aria-hidden="true">✓</div><span class="eyebrow">ONE MORE MOMENT OF CLARITY</span><h2>きれいに、揃いました。</h2><p id="completion-description"></p><div class="completion-stats"><div><span>タイム</span><strong id="completion-time"></strong></div><div><span>ヒント</span><strong id="completion-hints"></strong></div><div><span>クリア</span><strong id="completion-total"></strong></div></div><button class="primary-button" id="next-button">次の問題へ <span aria-hidden="true">→</span></button><button class="text-button close-dialog">盤面にもどる</button></dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <noscript><p class="noscript-message">数独を遊ぶには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
-  <script type="module" src="./src/app.mjs"></script>
+  <footer class="room-footer"><span>Y O H A K U &nbsp; / &nbsp; G A M E &nbsp; R O O M</span><span>A few good games. Nothing extra.</span></footer>
+  <dialog id="room-dialog" class="room-dialog"><div class="room-dialog-top"><span class="room-eyebrow" id="dialog-eyebrow">HOW TO PLAY</span><button class="room-icon-button" id="dialog-close" aria-label="閉じる">×</button></div><h2 id="dialog-title"></h2><div id="dialog-content"></div><button class="room-primary" id="dialog-done">わかった、遊んでみる</button></dialog>
+  <div id="room-toast" class="room-toast" role="status" aria-live="polite"></div>
+  <noscript><p class="room-noscript">ゲームを遊ぶには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+  <script type="module" src="./src/room.mjs"></script>
 </body>
 </html>
