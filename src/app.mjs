@@ -30,6 +30,8 @@ function write(key, value) {
 }
 let puzzles, puzzle, game;
 let selected = -1, noteMode = false, paused = false, filter = 0;
+let libraryPage = 0, progressFilter = 'all';
+const libraryPageSize = 40;
 let preferences = read('preferences', {autoCheck:false});
 if (!preferences || typeof preferences !== 'object') preferences = {autoCheck:false};
 preferences.autoCheck = preferences.autoCheck === true;
@@ -57,7 +59,7 @@ function save() {
   if (!game) return;
   const data = serializeGame(game);
   // Persist a useful undo stack without exhausting mobile browsers' storage quota.
-  data.history = data.history.slice(-25);
+  data.history = data.history.slice(game.completed ? -1 : -25);
   write(`puzzle:${puzzle.id}`, data);
   summaries[puzzle.id] = {completed:game.completed,started:game.board.some((n,i)=>n!==Number(puzzle.givens[i])) || game.notes.some(Boolean),elapsed:game.elapsed,hints:game.hints};
   write('summaries', summaries);
@@ -136,8 +138,8 @@ function renderBoard() {
 }
 function renderCollection() {
   const completed=puzzles.filter(p=>summaries[p.id]?.completed).length;
-  $('collection-count').innerHTML=`${completed} <small>/ 100</small>`;
-  $('collection-progress-fill').style.width=`${completed}%`;
+  $('collection-count').innerHTML=`${completed} <small>/ ${puzzles.length}</small>`;
+  $('collection-progress-fill').style.width=`${completed / puzzles.length * 100}%`;
   $('level-list').innerHTML=Object.entries(labels).map(([level,label])=>{
     const set=puzzles.filter(p=>p.level===Number(level));const done=set.filter(p=>summaries[p.id]?.completed).length;
     return `<button class="level-option ${puzzle.level===Number(level)?'active':''}" data-level="${level}" aria-label="レベル${level} ${label}の問題を選ぶ"><span class="level-n">Level ${level}</span><span class="level-name">${label}</span><span class="level-dots" aria-hidden="true">${Array.from({length:6},(_,i)=>`<i class="${i<=Number(level)-5?'on':''}"></i>`).join('')}</span><span class="level-completion">${done}/${set.length}</span></button>`;
@@ -167,25 +169,53 @@ function input(digit) {
   action(enterNumber(game,puzzle,selected,digit,{noteMode,autoCheck:preferences.autoCheck}));
 }
 function openDialog(dialog) { tick();dialog.showModal();lastTick=performance.now(); }
-function openLibrary(level=0) { filter=level;renderLibrary();openDialog($('library-dialog')); }
+function libraryMatches() {
+  const query=$('library-number').value.trim();
+  return puzzles.filter(p=>{
+    const summary=summaries[p.id];
+    if(filter&&p.level!==filter)return false;
+    if(query&&p.id!==Number(query))return false;
+    if(progressFilter==='uncompleted')return !summary?.completed;
+    if(progressFilter==='started')return summary?.started&&!summary?.completed;
+    if(progressFilter==='completed')return summary?.completed;
+    return true;
+  });
+}
+function openLibrary(level=0) {
+  filter=level;progressFilter='all';$('library-number').value='';
+  libraryPage=Math.max(0,Math.floor(libraryMatches().findIndex(p=>p.id===puzzle.id)/libraryPageSize));
+  renderLibrary();openDialog($('library-dialog'));
+  $('puzzle-grid').querySelector('.current')?.scrollIntoView({block:'nearest'});
+}
 function renderLibrary() {
   $('library-filters').innerHTML=[0,5,6,7,8,9,10].map(level=>`<button data-filter="${level}" class="${filter===level?'active':''}" aria-pressed="${filter===level}">${level?`Lv.${level}`:'すべて'}</button>`).join('');
-  $('puzzle-grid').innerHTML=puzzles.filter(p=>!filter||p.level===filter).map(p=>{
+  $('library-progress-filters').innerHTML=[['all','すべて'],['uncompleted','未クリア'],['started','途中'],['completed','クリア']].map(([value,label])=>`<button data-progress-filter="${value}" class="${progressFilter===value?'active':''}" aria-pressed="${progressFilter===value}">${label}</button>`).join('');
+  const matches=libraryMatches();
+  const pageCount=Math.max(1,Math.ceil(matches.length/libraryPageSize));
+  libraryPage=Math.max(0,Math.min(libraryPage,pageCount-1));
+  const first=libraryPage*libraryPageSize,last=Math.min(first+libraryPageSize,matches.length);
+  $('puzzle-grid').innerHTML=matches.slice(first,last).map(p=>{
     const summary=summaries[p.id]; const state=summary?.completed?'complete':summary?.started?'started':'';
     return `<button class="puzzle-tile ${state} ${p.id===puzzle.id?'current':''}" data-puzzle="${p.id}" aria-label="問題${p.id}、レベル${p.level}${summary?.completed?'、クリア済み':summary?.started?'、途中':''}${p.id===puzzle.id?'、プレイ中':''}"><strong>${String(p.id).padStart(3,'0')}</strong><small>LEVEL ${p.level}</small></button>`;
   }).join('');
+  $('puzzle-grid').scrollTop=0;
+  $('library-empty').hidden=matches.length>0;
+  $('library-range').textContent=matches.length?`${first+1}–${last} / ${matches.length}問`:'0 / 0問';
+  $('library-previous').disabled=libraryPage===0;
+  $('library-next').disabled=libraryPage===pageCount-1;
+  $('library-number-clear').hidden=!$('library-number').value;
 }
 function showCompletion() {
   $('completion-description').textContent=`No. ${String(puzzle.id).padStart(3,'0')} · Level ${puzzle.level} をクリアしました。`;
   $('completion-time').textContent=timeLabel(game.elapsed);
   $('completion-hints').textContent=`${game.hints}回`;
-  $('completion-total').textContent=`${puzzles.filter(p=>summaries[p.id]?.completed).length}/100`;
+  $('completion-total').textContent=`${puzzles.filter(p=>summaries[p.id]?.completed).length}/${puzzles.length}`;
   openDialog($('completion-dialog'));
 }
 function nextPuzzle() {
   const ordered=[...puzzles.filter(p=>p.id>puzzle.id),...puzzles.filter(p=>p.id<=puzzle.id)];
   const next=ordered.find(p=>!summaries[p.id]?.completed);
-  if(next)loadPuzzle(next.id);else{openLibrary();toast('100問すべてクリア。おめでとうございます！');}
+  if(next)loadPuzzle(next.id);else{openLibrary();toast(`${puzzles.length}問すべてクリア。おめでとうございます！`);}
 }
 
 $('undo-button').addEventListener('click',()=>{if(!paused)action(undo(game));});
@@ -206,7 +236,12 @@ function togglePause(){tick();paused=!paused;lastTick=performance.now();save();r
 $('pause-button').addEventListener('click',togglePause);$('resume-button').addEventListener('click',togglePause);
 for(const id of ['browse-button','mobile-library','puzzle-label','new-game-button'])$(id).addEventListener('click',()=>openLibrary());
 $('level-list').addEventListener('click',event=>{const button=event.target.closest('[data-level]');if(button)openLibrary(Number(button.dataset.level));});
-$('library-filters').addEventListener('click',event=>{const button=event.target.closest('[data-filter]');if(button){filter=Number(button.dataset.filter);renderLibrary();}});
+$('library-filters').addEventListener('click',event=>{const button=event.target.closest('[data-filter]');if(button){filter=Number(button.dataset.filter);libraryPage=0;renderLibrary();$('library-filters').querySelector(`[data-filter="${filter}"]`)?.focus();}});
+$('library-progress-filters').addEventListener('click',event=>{const button=event.target.closest('[data-progress-filter]');if(button){progressFilter=button.dataset.progressFilter;libraryPage=0;renderLibrary();$('library-progress-filters').querySelector(`[data-progress-filter="${progressFilter}"]`)?.focus();}});
+$('library-number').addEventListener('input',()=>{libraryPage=0;renderLibrary();});
+$('library-number-clear').addEventListener('click',()=>{$('library-number').value='';libraryPage=0;renderLibrary();$('library-number').focus();});
+$('library-previous').addEventListener('click',()=>{libraryPage--;renderLibrary();});
+$('library-next').addEventListener('click',()=>{libraryPage++;renderLibrary();});
 $('puzzle-grid').addEventListener('click',event=>{const button=event.target.closest('[data-puzzle]');if(button)loadPuzzle(Number(button.dataset.puzzle));});
 $('help-button').addEventListener('click',()=>openDialog($('help-dialog')));
 $('auto-check').checked=preferences.autoCheck;
@@ -252,7 +287,14 @@ async function start() {
     const response=await fetch(new URL('../puzzles.json',import.meta.url));
     if(!response.ok)throw new Error('Puzzle data unavailable');
     puzzles=await response.json();
-    if(!Array.isArray(puzzles)||puzzles.length!==100)throw new Error('Invalid puzzle collection');
+    if(!Array.isArray(puzzles)||!puzzles.length||puzzles.some(p=>!p||!Number.isSafeInteger(p.id)||p.id<1||!Number.isInteger(p.level)||p.level<5||p.level>10||!/^[0-9]{81}$/.test(p.givens)||!/^[1-9]{81}$/.test(p.solution))||new Set(puzzles.map(p=>p.id)).size!==puzzles.length)throw new Error('Invalid puzzle collection');
+    $('collection-description').innerHTML=`少し歯ごたえのある${puzzles.length}問。<br>考える時間に、余計なものはいらない。`;
+    $('browse-label').textContent=`${puzzles.length}問の問題集を見る`;
+    $('library-title').textContent=`${puzzles.length}問の問題集`;
+    $('collection-footer').textContent=`${puzzles.length} puzzles. No distractions.`;
+    $('library-number').max=Math.max(...puzzles.map(p=>p.id));
+    $('library-number').placeholder=`1〜${$('library-number').max}`;
+    document.title=`余白の数独 — ${puzzles.length} puzzles, your pace.`;
     loadPuzzle(Number(read('current',1)));
     try { localStorage.setItem('yohaku-games:last',JSON.stringify({id:'sudoku',playedAt:Date.now()})); } catch {}
     setInterval(tick,250);

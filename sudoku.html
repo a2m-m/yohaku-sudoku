@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f8f4">
-  <meta name="description" content="広告なし、会員登録なし。難易度5〜10の100問を、あなたのペースで。スマホで遊べる余白の数独。">
+  <meta name="description" content="広告なし、会員登録なし。難易度5〜10の500問を、あなたのペースで。スマホで遊べる余白の数独。">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>余白の数独 — 100 puzzles, your pace.</title>
+  <title>余白の数独 — 500 puzzles, your pace.</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./style.css">
@@ -25,11 +25,11 @@
     <aside class="collection" aria-label="問題集">
       <div class="eyebrow">THE SUDOKU COLLECTION</div>
       <h1>ひとマスずつ、<br>自分のペースで。</h1>
-      <p class="collection-description">少し歯ごたえのある100問。<br>考える時間に、余計なものはいらない。</p>
-      <div class="collection-progress"><div><span>コレクションの進捗</span><strong id="collection-count">0 <small>/ 100</small></strong></div><div class="progress-track"><div id="collection-progress-fill"></div></div></div>
+      <p class="collection-description" id="collection-description">少し歯ごたえのある500問。<br>考える時間に、余計なものはいらない。</p>
+      <div class="collection-progress"><div><span>コレクションの進捗</span><strong id="collection-count">0 <small>/ 500</small></strong></div><div class="progress-track"><div id="collection-progress-fill"></div></div></div>
       <div class="section-heading"><h2>難易度を選ぶ</h2><span>10段階評価</span></div>
       <div class="level-list" id="level-list"></div>
-      <button class="browse-button" id="browse-button"><span>100問の問題集を見る</span><span aria-hidden="true">↗</span></button>
+      <button class="browse-button" id="browse-button"><span id="browse-label">500問の問題集を見る</span><span aria-hidden="true">↗</span></button>
       <div class="aside-footer"><span class="tiny-grid" aria-hidden="true">▦</span><p>いつでも中断して、大丈夫。<br>続きはこの端末に自動保存されます。</p></div>
     </aside>
 
@@ -49,9 +49,20 @@
       <div class="play-footer"><span class="saved-status" id="saved-status"><i></i> 自動保存済み</span><button id="new-game-button">別の問題へ <span aria-hidden="true">→</span></button></div>
     </section>
   </main>
-  <footer class="site-footer"><span>Y O H A K U &nbsp; / &nbsp; S U D O K U</span><span>100 puzzles. No distractions.</span></footer>
+  <footer class="site-footer"><span>Y O H A K U &nbsp; / &nbsp; S U D O K U</span><span id="collection-footer">500 puzzles. No distractions.</span></footer>
 
-  <dialog id="library-dialog" class="library-dialog"><div class="dialog-heading"><div><span class="eyebrow">YOUR COLLECTION</span><h2>100問の問題集</h2></div><button class="icon-button close-dialog" aria-label="閉じる"></button></div><p class="dialog-intro">好きな問題から、少しずつ。途中の問題も続きから遊べます。</p><div class="library-filters" id="library-filters" aria-label="難易度で絞り込む"></div><div class="library-legend"><span><i class="legend-current"></i> プレイ中</span><span><i class="legend-started"></i> 途中</span><span><i class="legend-complete"></i> クリア</span></div><div class="puzzle-grid" id="puzzle-grid"></div><p class="difficulty-note">レベルは候補の絞り込み・必要な探索量をもとにした、このアプリ内の10段階評価です。</p></dialog>
+  <dialog id="library-dialog" class="library-dialog">
+    <div class="dialog-heading"><div><span class="eyebrow">YOUR COLLECTION</span><h2 id="library-title">500問の問題集</h2></div><button class="icon-button close-dialog" aria-label="閉じる"></button></div>
+    <p class="dialog-intro">好きな問題から。途中の問題も続きから遊べます。</p>
+    <div class="library-filters" id="library-filters" role="group" aria-label="難易度で絞り込む"></div>
+    <div class="library-progress-filters" id="library-progress-filters" role="group" aria-label="進み具合で絞り込む"></div>
+    <div class="library-search"><label for="library-number">番号で探す</label><input id="library-number" type="number" inputmode="numeric" min="1" step="1" placeholder="1〜500" aria-label="問題番号で探す"><button id="library-number-clear" type="button" hidden>クリア</button></div>
+    <div class="library-legend"><span><i class="legend-current"></i> プレイ中</span><span><i class="legend-started"></i> 途中</span><span><i class="legend-complete"></i> クリア</span></div>
+    <div class="puzzle-grid" id="puzzle-grid"></div>
+    <p class="library-empty" id="library-empty" hidden>この条件に合う問題はありません。<br>絞り込みや番号を変えてみてください。</p>
+    <nav class="library-pagination" aria-label="問題一覧のページ"><button id="library-previous" type="button">← 前へ</button><span id="library-range" role="status" aria-live="polite"></span><button id="library-next" type="button">次へ →</button></nav>
+    <p class="difficulty-note">レベルは候補の絞り込み・必要な探索量をもとにした、このアプリ内の10段階評価です。</p>
+  </dialog>
   <dialog id="help-dialog"><div class="dialog-heading"><div><span class="eyebrow">MAKE YOURSELF AT HOME</span><h2>遊び方と設定</h2></div><button class="icon-button close-dialog" aria-label="閉じる"></button></div><div class="help-copy"><h3>ルールは、ひとつ。</h3><p>タテ・ヨコ・3×3のブロックに、1〜9をひとつずつ。初めからある数字は動かせません。</p><h3>あなたのペースで。</h3><p>マスをタップして数字を選びます。「メモ」で候補を書き込み、「候補を記入」で空きマスの候補をまとめて表示できます。ヒントは回数制限なく使えます。</p><label class="setting-row" for="auto-check"><span><strong>間違いを自動で表示</strong><small>答えと異なる数字を赤く表示します</small></span><input type="checkbox" id="auto-check" role="switch"></label><p class="help-shortcuts">パソコンでは数字キーで入力。矢印キーで移動、Nでメモ、Deleteで消去、⌘ / Ctrl + Zで元に戻せます。</p><p class="help-storage">進捗はこのブラウザに保存されます。別の端末とは同期しません。ブラウザのデータを消すと進捗も消えます。初回読み込み後はオフラインでも遊べます。</p></div><button class="secondary-button" id="restart-button">この問題を最初から</button></dialog>
   <dialog id="completion-dialog" class="completion-dialog"><div class="completion-art" aria-hidden="true">✓</div><span class="eyebrow">ONE MORE MOMENT OF CLARITY</span><h2>きれいに、揃いました。</h2><p id="completion-description"></p><div class="completion-stats"><div><span>タイム</span><strong id="completion-time"></strong></div><div><span>ヒント</span><strong id="completion-hints"></strong></div><div><span>クリア</span><strong id="completion-total"></strong></div></div><button class="primary-button" id="next-button">次の問題へ <span aria-hidden="true">→</span></button><button class="text-button close-dialog">盤面にもどる</button></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
