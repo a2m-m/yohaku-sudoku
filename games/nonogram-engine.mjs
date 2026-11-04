@@ -9,11 +9,51 @@ export function linePatterns(clues,size){
   visit(0,0,Array(size).fill(0));return output;
 }
 export function countSolutions(rowClues,colClues,limit=2){
-  const size=rowClues.length;if(!size||colClues.length!==size)return 0;
-  const rowOptions=rowClues.map(clues=>linePatterns(clues,size)),columns=colClues.map(clues=>linePatterns(clues,size));
+  const size=rowClues?.length;
+  if(!Array.isArray(rowClues)||!Array.isArray(colClues)||!size||colClues.length!==size||limit<=0)return 0;
+  const valid=clues=>Array.isArray(clues)&&(clues.length===0||clues.length===1&&clues[0]===0||clues.every(n=>Number.isInteger(n)&&n>0)&&clues.reduce((sum,n)=>sum+n,0)+clues.length-1<=size);
+  if(!rowClues.every(valid)||!colClues.every(valid))return 0;
+  const total=clues=>clues.reduce((sum,line)=>sum+line.reduce((n,value)=>n+value,0),0);
+  if(total(rowClues)!==total(colClues))return 0;
+  const rows=rowClues.map(clues=>linePatterns(clues,size)),cols=colClues.map(clues=>linePatterns(clues,size));
   let count=0;
-  function visit(row,options){if(count>=limit)return;if(row===size){count++;return;}for(const pattern of rowOptions[row]){const next=options.map((possibilities,col)=>possibilities.filter(line=>line[row]===pattern[col]));if(next.every(list=>list.length))visit(row+1,next);if(count>=limit)return;}}
-  visit(0,columns);return count;
+  // Bit 1 permits an empty cell, bit 2 permits a filled cell. Supporting both
+  // values keeps a candidate alive; a forced value prunes the crossing line.
+  const supports=domains=>domains.map(options=>{const cells=new Uint8Array(size);for(const line of options)for(let i=0;i<size;i++)cells[i]|=1<<line[i];return cells;});
+  function propagate(rowDomains,colDomains){
+    let changed;
+    do{
+      changed=false;
+      const colSupports=supports(colDomains);
+      for(let r=0;r<size;r++){
+        const before=rowDomains[r],next=before.filter(line=>line.every((value,c)=>colSupports[c][r]&(1<<value)));
+        if(!next.length)return false;
+        if(next.length!==before.length){rowDomains[r]=next;changed=true;}
+      }
+      const rowSupports=supports(rowDomains);
+      for(let c=0;c<size;c++){
+        const before=colDomains[c],next=before.filter(line=>line.every((value,r)=>rowSupports[r][c]&(1<<value)));
+        if(!next.length)return false;
+        if(next.length!==before.length){colDomains[c]=next;changed=true;}
+      }
+    }while(changed);
+    return true;
+  }
+  function visit(rowDomains,colDomains){
+    if(count>=limit||!propagate(rowDomains,colDomains))return;
+    let chosen=null,index=-1,min=Infinity;
+    for(const domains of [rowDomains,colDomains])for(let i=0;i<size;i++)if(domains[i].length>1&&domains[i].length<min){chosen=domains;index=i;min=domains[i].length;}
+    if(!chosen){count++;return;}
+    // Branch on the most constrained line, including columns. Each branch is
+    // isolated: candidate lines are immutable and only domain arrays change.
+    for(const line of chosen[index]){
+      const nextRows=rowDomains.slice(),nextCols=colDomains.slice();
+      (chosen===rowDomains?nextRows:nextCols)[index]=[line];
+      visit(nextRows,nextCols);
+      if(count>=limit)return;
+    }
+  }
+  visit(rows,cols);return count;
 }
 export function solutionFor(puzzle){return puzzle.rows.flatMap(row=>Array.from(row,Number));}
 export function createGame(puzzle,saved=null){
@@ -45,4 +85,4 @@ export function hint(game,puzzle){
 }
 export function wrongCells(game,puzzle){const solution=solutionFor(puzzle);return game.cells.flatMap((value,i)=>value===1&&solution[i]===0||value===-1&&solution[i]===1?[i]:[]);}
 export function lineMatches(line,clues){return JSON.stringify(runs(line.map(value=>value===1?1:0)))===JSON.stringify(clues);}
-export function serializeGame(game){return {...copy(game),version:1,history:game.history.slice(-30).map(snapshot)};}
+export function serializeGame(game){return {...copy(game),version:1,history:game.history.slice(game.completed?-1:-30).map(snapshot)};}
