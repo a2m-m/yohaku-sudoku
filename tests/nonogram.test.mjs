@@ -1,12 +1,28 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {PUZZLES} from '../games/nonogram-puzzles.mjs';
 import {runs,cluesFor,linePatterns,countSolutions,createGame,paintCells,undo,hint,wrongCells,lineMatches,serializeGame,solutionFor} from '../games/nonogram-engine.mjs';
 
-test('24 handcrafted pictures have stable distinct identifiers, valid cells and unique solutions',()=>{
-  assert.equal(PUZZLES.length,24);assert.equal(PUZZLES.filter(p=>p.size===5).length,8);assert.equal(PUZZLES.filter(p=>p.size===10).length,16);
-  assert.equal(new Set(PUZZLES.map(p=>p.id)).size,24);assert.equal(new Set(PUZZLES.map(p=>p.rows.join(''))).size,24);
-  for(const puzzle of PUZZLES){assert.equal(puzzle.rows.length,puzzle.size);assert.ok(puzzle.rows.every(row=>row.length===puzzle.size&&/^[01]+$/.test(row)));const clues=cluesFor(puzzle.rows);assert.equal(countSolutions(clues.rows,clues.cols),1,puzzle.title);}
+test('200 original pictures cover three sizes with valid cells, distinct IDs and unique solutions',()=>{
+  assert.equal(PUZZLES.length,200);
+  assert.deepEqual([5,10,15].map(size=>PUZZLES.filter(p=>p.size===size).length),[40,80,80]);
+  assert.deepEqual(PUZZLES.map(p=>p.id),Array.from({length:200},(_,i)=>`ng${String(i+1).padStart(3,'0')}`));
+  assert.equal(new Set(PUZZLES.map(p=>p.rows.join(''))).size,200);
+  for(const puzzle of PUZZLES){assert.equal(puzzle.rows.length,puzzle.size);assert.ok(puzzle.rows.every(row=>row.length===puzzle.size&&/^[01]+$/.test(row)));assert.ok(puzzle.rows.join('').includes('0')&&puzzle.rows.join('').includes('1'));const clues=cluesFor(puzzle.rows);assert.equal(countSolutions(clues.rows,clues.cols),1,`${puzzle.id} ${puzzle.title}`);}
+});
+test('the first 24 published picture IDs, titles and bitmaps remain byte-for-byte compatible',()=>{
+  const digest=createHash('sha256').update(JSON.stringify(PUZZLES.slice(0,24))).digest('hex');
+  assert.equal(digest,'620c8752242a4e3bc3733ca7b4947a1df3c60e3e6e9fa7773caffcc9efc77a0f');
+});
+test('a 15×15 picture can be completed, saved, restored, and undone',()=>{
+  const puzzle=PUZZLES.find(p=>p.size===15),game=createGame(puzzle);
+  const indices=solutionFor(puzzle).flatMap((filled,i)=>filled?[i]:[]);
+  const complete=paintCells(game,puzzle,indices,1).state;
+  assert.equal(complete.cells.length,225);assert.equal(complete.completed,true);
+  assert.deepEqual(createGame(puzzle,serializeGame(complete)),complete);
+  const previous=undo(complete,puzzle).state;
+  assert.equal(previous.completed,false);assert.ok(previous.cells.every(cell=>cell===0));
 });
 test('run clues preserve separated groups, empty lines and ordering',()=>{
   assert.deepEqual(runs([0,1,1,0,1,0,1,1,1]),[2,1,3]);assert.deepEqual(runs([0,0,0]),[0]);
