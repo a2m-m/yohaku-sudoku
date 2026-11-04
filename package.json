@@ -1,9 +1,9 @@
 {
   "name": "yohaku-sudoku",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "type": "module",
-  "description": "広告なしの定番7ゲーム。オセロ・数独・マインスイーパー・ソリティア・フリーセル・15パズル・2048。",
+  "description": "広告なしの定番9ゲーム。お絵描きロジック・ウッドパズル・オセロ・数独ほか。",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",

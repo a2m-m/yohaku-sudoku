@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f8f4">
-  <meta name="description" content="オセロ、数独、マインスイーパー、ソリティア、フリーセル、15パズル、2048。広告も登録もない、スマホで遊べる定番ゲーム集。">
+  <meta name="description" content="お絵描きロジック、ウッドパズル、オセロ、数独ほか。広告も登録もない、スマホで遊べる9種類の定番ゲーム集。">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>余白のゲーム室 — いつものゲーム、あなたのペースで。</title>
@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="./games/cards.css">
   <link rel="stylesheet" href="./games/numbers.css">
   <link rel="stylesheet" href="./games/reversi.css">
+  <link rel="stylesheet" href="./games/nonogram.css">
+  <link rel="stylesheet" href="./games/wood.css">
 </head>
 <body>
   <header class="room-header">
@@ -24,9 +26,9 @@
 
   <main id="room-main">
     <section id="home-view" class="room-home" aria-labelledby="home-title">
-      <div class="room-intro"><div><span class="room-eyebrow">A LITTLE ROOM FOR THE CLASSICS</span><h1 id="home-title">今日は、どれで遊ぶ？</h1><p>懐かしい定番を、あなたのペースで。<br class="mobile-break">ルールは知らなくても、大丈夫。</p></div><span class="room-collection-label"><span id="game-total">07</span> GAMES<br>NO DISTRACTIONS.</span></div>
+      <div class="room-intro"><div><span class="room-eyebrow">A LITTLE ROOM FOR THE CLASSICS</span><h1 id="home-title">今日は、どれで遊ぶ？</h1><p>懐かしい定番を、あなたのペースで。<br class="mobile-break">ルールは知らなくても、大丈夫。</p></div><span class="room-collection-label"><span id="game-total">09</span> GAMES<br>NO DISTRACTIONS.</span></div>
       <a id="recent-game" class="room-recent" hidden><span class="room-recent-icon" aria-hidden="true">↶</span><span><small>また、ここから。</small><strong id="recent-title"></strong></span><span class="room-recent-arrow" aria-hidden="true">→</span></a>
-      <div class="room-library-heading"><div class="room-filters" id="game-filters" aria-label="ゲームの種類"><button class="active" data-filter="all" aria-pressed="true">すべて <span id="game-filter-total">7</span></button><button data-filter="puzzle" aria-pressed="false">パズル</button><button data-filter="cards" aria-pressed="false">カード</button><button data-filter="board" aria-pressed="false">ボード</button></div><span id="game-count">7つの定番ゲーム</span></div>
+      <div class="room-library-heading"><div class="room-filters" id="game-filters" aria-label="ゲームの種類"><button class="active" data-filter="all" aria-pressed="true">すべて <span id="game-filter-total">9</span></button><button data-filter="puzzle" aria-pressed="false">パズル</button><button data-filter="cards" aria-pressed="false">カード</button><button data-filter="board" aria-pressed="false">ボード</button></div><span id="game-count">9つの定番ゲーム</span></div>
       <div class="room-game-grid" id="game-grid"></div>
       <div class="room-home-note"><span class="room-note-symbol" aria-hidden="true">◇</span><p>ひと休みしても、続きはここに。<br><span>途中経過はこのブラウザに自動保存。初回読み込み後はオフラインでも遊べます。</span></p></div>
     </section>
