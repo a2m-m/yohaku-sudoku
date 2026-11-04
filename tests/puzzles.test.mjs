@@ -1,16 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { candidates, countSolutions, solve, ratePuzzle, ROWS, COLS, BOXES } from '../src/sudoku.mjs';
 
 const puzzles = JSON.parse(await readFile(new URL('../puzzles.json', import.meta.url), 'utf8'));
-test('100 independent puzzles cover levels 5–10 in the specified distribution', () => {
-  assert.equal(puzzles.length, 100);
-  assert.equal(new Set(puzzles.map((puzzle) => puzzle.givens)).size, 100);
-  assert.equal(new Set(puzzles.map((puzzle) => puzzle.solution)).size, 100);
-  assert.deepEqual(puzzles.map((puzzle) => puzzle.id), Array.from({ length: 100 }, (_, i) => i + 1));
+test('500 independent puzzles cover levels 5–10 in the specified distribution', () => {
+  assert.equal(puzzles.length, 500);
+  assert.equal(new Set(puzzles.map((puzzle) => puzzle.givens)).size, 500);
+  assert.equal(new Set(puzzles.map((puzzle) => puzzle.solution)).size, 500);
+  assert.deepEqual(puzzles.map((puzzle) => puzzle.id), Array.from({ length: 500 }, (_, i) => i + 1));
   const distribution = puzzles.reduce((counts, puzzle) => { counts[puzzle.level] = (counts[puzzle.level] || 0) + 1; return counts; }, {});
-  assert.deepEqual(distribution, { 5: 20, 6: 20, 7: 20, 8: 15, 9: 15, 10: 10 });
+  assert.deepEqual(distribution, { 5: 100, 6: 100, 7: 100, 8: 75, 9: 75, 10: 50 });
+});
+test('the first 100 published puzzle objects stay identical so saved games keep their meaning', () => {
+  const fingerprint = createHash('sha256').update(JSON.stringify(puzzles.slice(0, 100))).digest('hex');
+  assert.equal(fingerprint, 'e4266172ca63a469604f1d76688c7b85fb109b8e318cf0d351acbec2972a7334');
 });
 for (const puzzle of puzzles) {
   test(`puzzle ${puzzle.id} has one solution, valid rows/columns/boxes, and reproducible level ${puzzle.level}`, () => {
