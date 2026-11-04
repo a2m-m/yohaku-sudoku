@@ -1,6 +1,6 @@
 {
   "name": "yohaku-sudoku",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": true,
   "type": "module",
   "description": "広告なしの定番9ゲーム。お絵描きロジック・ウッドパズル・オセロ・数独ほか。",
