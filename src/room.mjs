@@ -1,5 +1,6 @@
 const $=id=>document.getElementById(id);
 const games=[
+  {id:'reversi',name:'オセロ',en:'REVERSI',category:'board',description:'はさんで返す、白と黒の駆け引き。',skill:'コンピューター対戦・2人対戦',tag:'NEW · 白と黒の定番',oneLine:'相手の石をはさんで、自分の色に。最後に石が多いほうの勝ち。',goal:'タテ・ヨコ・ナナメで相手の石をはさんで返し、最後に自分の石を多くしよう。',steps:['黒が先手です。自分の石と新しく置く石で、相手の石を1個以上はさめるマスに置きます。小さな丸が、置ける場所の目印です。','はさんだ石は、すべて自分の色にひっくり返ります。一手で複数の方向にはさむこともできます。','置ける場所がない場合は自動でパス。両者とも置けなくなったら終了し、盤面の石が多いほうが勝ちです。同じ数なら引き分けです。','コンピューター対戦では、あなたは黒。強さは3段階から選べます。「2人で対戦」では、同じ画面で黒と白を交互に操作します。'],tip:'迷ったら「おすすめの一手」をどうぞ。コンピューター対戦の「元に戻す」は、あなたが打つ前まで戻せます。四隅を取ると、その石は返されません。'},
   {id:'mines',name:'マインスイーパー',en:'MINESWEEPER',category:'puzzle',description:'数字を頼りに、地雷を見つける。',skill:'はじめてでも、少しずつ',tag:'昔のPCの、あのゲーム',oneLine:'数字は、周り8マスの地雷の数。地雷のないマスをすべて開こう。',goal:'地雷を踏まずに、安全なマスをすべて開けばクリア。',steps:['まずは、好きなマスをタップ。最初のマスとその周りには地雷がありません。','数字は、周囲8マスにある地雷の数。「1」なら、その周りのどこかに地雷が1個あります。','地雷の場所がわかったら「旗を立てる」に切り替えて印を付けます。安全な場所を開くときは「開く」に戻しましょう。','数字の周りに同じ数の旗を置いたら、その数字をタップすると残りの周囲をまとめて開けます。旗の場所が違うと地雷を踏むので慎重に。'],tip:'初級からがおすすめ。パソコンでは右クリックでも旗を置けます。地雷を踏んでも何度でも挑戦できます。'},
   {id:'sudoku',name:'数独',en:'SUDOKU',category:'puzzle',description:'ひとマスずつ、数字を揃える。',skill:'難易度5〜10 · 全100問',tag:'100問のコレクション'},
   {id:'solitaire',name:'ソリティア',en:'KLONDIKE SOLITAIRE',category:'cards',description:'赤と黒を重ねて、すっきりと。',skill:'定番の1枚めくり',tag:'おなじみの、ひとりトランプ',oneLine:'場では赤と黒を交互に、KからAへ。上の組には同じマークでAからKへ。',goal:'4つのマークごとに、A → 2 → … → Kの順で全52枚を揃えよう。',steps:['左上の山札をタップすると、カードを1枚めくれます。山札がなくなったら、もう一度タップしてめくり直せます。','場のカードを選んで、移動先をタップ。赤・黒が交互で、数字が1つ小さいカードを重ねられます。例：黒の7の上に赤の6。','並んだカードはまとめて移動できます。場の空いた列に置けるのはKから始まる並びだけです。','Aが出たら上の組へ。同じマークでAから順に重ねます。「自動で揃える」で移動できるカードを上に送れます。'],tip:'動かすカード → 移動先の順にタップ。ドラッグしなくて大丈夫です。「ヒント」と「元に戻す」も使えます。配札によってはクリアできないこともあります。'},
@@ -9,6 +10,7 @@ const games=[
 ];
 const href=game=>game.id==='sudoku'?'./sudoku.html':`#${game.id}`;
 function preview(id){
+  if(id==='reversi')return `<div class="preview-reversi">${Array.from({length:64},(_,i)=>`<span>${[28,35].includes(i)?'<i class="pr-black"></i>':[27,36].includes(i)?'<i class="pr-white"></i>':[19,26,37,44].includes(i)?'<b></b>':''}</span>`).join('')}</div>`;
   if(id==='mines')return `<div class="preview-mines">${['','',1,'','','','','',1,2,1,'','','','',1,'⚑',1,'','','','',1,1,1,'','','','','','','','','',''].map(v=>`<span class="${v?'open':''} ${v===2?'two':''} ${v==='⚑'?'flag':''}">${v}</span>`).join('')}</div>`;
   if(id==='sudoku'){const values='090108000004000006000060000000084050000070862009000300201540000700000004006003007';return `<div class="preview-sudoku">${Array.from(values,(v,i)=>`<span class="${[4,13,22,31,40,49,58,67,76].includes(i)?'p-highlight':''}">${v==='0'?'':v}</span>`).join('')}</div>`;}
   if(id==='solitaire')return '<div class="preview-cards"><div class="preview-card pc-1 c-green">K<small>♠</small><span>♠</span></div><div class="preview-card pc-2 c-red">Q<small>♥</small><span>♥</span></div><div class="preview-card pc-3 c-green">J<small>♣</small><span>♣</span></div></div>';
@@ -22,6 +24,8 @@ function read(key,fallback){if(fallbackStorage.has(key))return fallbackStorage.g
 function write(key,value){fallbackStorage.set(key,value);try{localStorage.setItem(key,JSON.stringify(value));}catch{}}
 function toast(message){$('room-toast').textContent=message;$('room-toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('room-toast').classList.remove('visible'),3500);}
 function renderHome(){
+  $('game-total').textContent=String(games.length).padStart(2,'0');
+  $('game-filter-total').textContent=games.length;
   const visible=games.filter(g=>category==='all'||g.category===category);
   $('game-grid').innerHTML=visible.map((game,i)=>`<a href="${href(game)}" class="room-game-card" data-game="${game.id}" style="--delay:${i*40}ms" aria-label="${game.name}で遊ぶ"><div class="room-card-preview" aria-hidden="true"><span class="room-card-tag">${game.tag}</span>${preview(game.id)}</div><div class="room-card-body"><span class="room-card-category">${game.en}</span><div class="room-card-title-line"><h2>${game.name}</h2><span class="room-card-arrow" aria-hidden="true">↗</span></div><p>${game.description}</p><span class="room-card-skill"><i></i>${game.skill}</span></div></a>`).join('');
   $('game-count').textContent=`${visible.length}つの定番ゲーム`;
@@ -54,12 +58,12 @@ async function route(){
   $('game-view').classList.toggle('wide-game',game.category==='cards');
   $('game-category').textContent=game.en;
   $('game-title').textContent=game.name;
-  $('game-number').textContent=`${String(games.indexOf(game)+1).padStart(2,'0')} / 06`;
+  $('game-number').textContent=`${String(games.indexOf(game)+1).padStart(2,'0')} / ${String(games.length).padStart(2,'0')}`;
   $('game-one-line').textContent=game.oneLine;
   $('game-container').innerHTML='<p class="room-loading" role="status">ゲームを準備しています…</p>';
   write('yohaku-games:last',{id:game.id,playedAt:Date.now()});
   try{
-    const module=await(game.id==='mines'?import('../games/mines.mjs'):game.category==='cards'?import('../games/cards.mjs'):import('../games/numbers.mjs'));
+    const module=await(game.id==='reversi'?import('../games/reversi.mjs'):game.id==='mines'?import('../games/mines.mjs'):game.category==='cards'?import('../games/cards.mjs'):import('../games/numbers.mjs'));
     if(sequence!==routeSequence)return;
     $('game-container').replaceChildren();
     cleanup=module.mount($('game-container'),{id:game.id,notify:toast,onUpdate:()=>{}});
